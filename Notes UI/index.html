@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="w-full h-screen flex flex-row items-start">
+      <!-- notes sidebar -->
+      <div
+        id="notesSidebar"
+        class="w-[400px] h-screen border-r-[2px] p-[50px] [&>*]:mb-[10px] [&>*]:rounded-[3px]"
+      >
+        <input
+          class="w-full text-[13px] p-[10px] border border-slate-500"
+          type="text"
+          id="title"
+          placeholder="Add title"
+        />
+        <textarea
+          class="w-full text-[13px] p-[10px] max-w-full border border-slate-500"
+          id="description"
+          placeholder="Add description"
+        ></textarea>
+        <button
+          class="transition-all bg-[#353535] text-[#fff] py-[10px] px-[20px] cursor-pointer"
+          id="saveBtn"
+        >
+          Save
+        </button>
+        <button
+          class="bg-[#e74c3c] text-[#fff] py-[10px] px-[20px] cursor-pointer hidden"
+          id="deleteBtn"
+        >
+          Delete
+        </button>
+      </div>
+
+      <!-- notes container -->
+      <div
+        class="p-[50px] flex-1 flex flex-row flex-wrap w-full gap-[30px] justify-center"
+        id="notesContainer"
+      >
+        <!-- note -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
